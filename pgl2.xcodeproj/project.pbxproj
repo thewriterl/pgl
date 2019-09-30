@@ -16,6 +16,7 @@
 		3994A48F2340F90300AE855C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3994A48D2340F90300AE855C /* LaunchScreen.storyboard */; };
 		3994A49A2340F90300AE855C /* pgl2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3994A4992340F90300AE855C /* pgl2Tests.swift */; };
 		3994A4A52340F90300AE855C /* pgl2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3994A4A42340F90300AE855C /* pgl2UITests.swift */; };
+		3994A4B32340FE0600AE855C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3994A4B22340FE0600AE855C /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3994A4A02340F90300AE855C /* pgl2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pgl2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3994A4A42340F90300AE855C /* pgl2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pgl2UITests.swift; sourceTree = "<group>"; };
 		3994A4A62340F90300AE855C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3994A4B22340FE0600AE855C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				3994A47F2340F90100AE855C /* AppDelegate.swift */,
 				3994A4812340F90100AE855C /* SceneDelegate.swift */,
 				3994A4832340F90100AE855C /* ViewController.swift */,
+				3994A4B22340FE0600AE855C /* Extensions.swift */,
 				3994A4852340F90100AE855C /* Main.storyboard */,
 				3994A48B2340F90300AE855C /* Assets.xcassets */,
 				3994A48D2340F90300AE855C /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3994A4B32340FE0600AE855C /* Extensions.swift in Sources */,
 				3994A4842340F90100AE855C /* ViewController.swift in Sources */,
 				3994A4802340F90100AE855C /* AppDelegate.swift in Sources */,
 				3994A48A2340F90100AE855C /* pgl2.xcdatamodeld in Sources */,
