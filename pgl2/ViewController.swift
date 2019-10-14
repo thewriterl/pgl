@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    private let funcionalidadeCellId = "FuncionalidadeCell"
+    
     let cardView: UIView = {
         let card = UIView()
         card.backgroundColor = .red
@@ -39,7 +41,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        funcionalidadesCV.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellID")
+        funcionalidadesCV.register(FuncionalidadeCell.self, forCellWithReuseIdentifier: funcionalidadeCellId)
         funcionalidadesCV.backgroundColor = .yellow
         funcionalidadesCV.delegate = self
         funcionalidadesCV.dataSource = self
@@ -53,7 +55,7 @@ class ViewController: UIViewController {
         
         cardBackground.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.centerYAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
         
-        cardView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view?.centerYAnchor, right: view.rightAnchor, paddingTop: view.safeAreaInsets.top + 50, paddingLeft: 20, paddingBottom: 20, paddingRight: 20, width: 200, height: 100)
+        cardView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, paddingTop: 50, paddingLeft: 20, paddingBottom: 20, paddingRight: 20, width: 200, height: 100)
         
         cardNameLabel.anchor(top: nil, left: cardView.leftAnchor, bottom: cardView.bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 20, paddingBottom: 20, paddingRight: 0, width: 0, height: 0)
         
@@ -69,39 +71,22 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 4
-        } else {
-            return 7
-        }
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath)
-        if indexPath.section == 0 {
-            cell.backgroundColor = .purple
-        } else {
-            cell.backgroundColor = .blue
-        }
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: funcionalidadeCellId, for: indexPath) as! FuncionalidadeCell
         return cell
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        switch indexPath.section {
-            case 0:
-                return CGSize(width: view.frame.width / 5, height: 100)
-            case 1:
-                return CGSize(width: view.frame.width / 5, height: 200)
-            default:
-                return CGSize(width: view.frame.width / 5, height: 25)
-        }
-        
+        return CGSize(width: view.frame.width, height: 170)
     }
     
 }
